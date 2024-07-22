@@ -65,3 +65,37 @@ int main ()
 
  return 0;
 }
+
+// leet code question
+// Count ways to reach the N-th stair
+// you have been given a number of stairs. Initially, you are at he 0th stair, and you need to reach the Nth stair. Each time you can either
+// climb one step or two step. You are supposed to return the number of distinct ways in which you can climb from the 0th step to Nth step.
+#include <iostream>
+using namespace std;
+int fact(int n){
+    if(n == 0){
+        return 1;
+    }
+    if(n == 1){
+        return 1;
+    }
+    int total = n * fact(n-1);
+    return total;
+}
+int ans = 0;
+int count(int n, int a=0){
+    if(a > n){
+        return 0;
+    }
+    ans = ans + fact(n)/(fact(a)*fact(n-a));
+    count(n-1,a+1);
+    return ans;
+}
+int main(){
+    int n;
+    cout<<"Enter the number of stairs: ";
+    cin>>n;
+    int final = count(n);
+    cout<<final;
+    return 0;
+}
