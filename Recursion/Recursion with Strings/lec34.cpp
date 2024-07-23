@@ -100,3 +100,30 @@ int main(){
     }
     return 0;
 }
+// another bubble sort using recursion
+#include <iostream>
+using namespace std;
+
+void bubbleSort(int arr[], int size){
+    if(size == 0 || size == 1){
+        return;
+    }
+    for(int i=0; i< size-1; i++){
+        if(arr[i]>arr[i+1]){
+            int temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+            bubbleSort(arr,size-1);
+        }
+    }
+    return;
+}
+
+int main() {
+    // Write C++ code here
+    int arr[] = {4,7,3,9,2,0,1,7,54,7};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr,size);
+    for(int i:arr) cout<<i<<" ";
+    return 0;
+}
