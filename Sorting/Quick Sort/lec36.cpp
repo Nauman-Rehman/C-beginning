@@ -1,4 +1,47 @@
 # include <iostream>
+// using namespace std;
+
+// void swap(int& m, int& n){
+//     int temp = m;
+//     m = n;
+//     n = temp;
+//     return;
+// }
+
+// void quickSort(int arr[], int s, int n){
+//     if(s>=n){
+//         return;
+//     }
+//     int count = s;
+//     for(int i = s+1; i<=n; i++){
+//         if(arr[s]>arr[i]){
+//             count++;
+//         }
+//     }
+//     swap(arr[s], arr[count]);
+//     int i = s;
+//     int j = n;
+//     while(i<count && j>count){
+//         while(arr[i] <= arr[count] && i < count){
+//             i++;
+//         }
+//         while(arr[j] >= arr[count] && j > count){
+//             j--;
+//         }
+//         if(arr[i] > arr[j]){
+//             swap(arr[i], arr[j]);
+//         }
+//     }
+//     quickSort(arr, s, count-1);
+//     quickSort(arr, count+1, n);
+//     return;
+// }
+// the above code is also of quick sort but don't sort properly at a point with logic, and I am not sure that how many kinds of arrays it can't sort properly
+// one of the array it can't properly sort is --> {4,23,67,9,2,5,9,23,6,9};
+
+
+
+# include <iostream>
 using namespace std;
 
 void swap(int& m, int& n){
