@@ -1,3 +1,4 @@
+// make power set of given set when the elements in a set is integer
 # include <iostream>
 # include <vector>
 using namespace std;
@@ -35,4 +36,40 @@ int main(){
         cout << "]" << endl; 
      }
    return 0;
+}
+
+
+// make the power set of the given string using its characters
+# include <iostream>
+# include <vector>
+# include <string.h>
+using namespace std;
+void solve(string name, string output, int index, vector<string>& ans){
+    if(index >= name.size()){
+        ans.push_back(output);
+        return;
+    }
+    // exclude
+    solve(name, output, index+1, ans);
+    
+    // include
+    char element = name[index];
+    output.push_back(element);
+    solve(name, output, index+1, ans);
+}
+
+vector<string> sequence(string name){
+    
+    vector<string> ans;
+    string output;
+    int index = 0;
+    solve(name, output, index, ans);
+    return ans;
+}
+
+int main(){
+    string name = "abc";
+    vector<string> ans = sequence(name);
+    for(string i : ans) cout<<i<<", ";
+  return 0;
 }
