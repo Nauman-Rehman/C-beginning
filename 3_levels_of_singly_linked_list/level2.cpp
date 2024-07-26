@@ -45,10 +45,6 @@ class node{
 
 int main ()
 {
-    // node* node1 = new node(10);
-    // cout<< node1 -> data << endl;
-    // cout<< node1 -> next << endl;
-    
     node* head = NULL;
     node* tail = NULL;
     // print(tail);
