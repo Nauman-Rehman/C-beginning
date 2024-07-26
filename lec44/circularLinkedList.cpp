@@ -1,3 +1,11 @@
+// Theory of "this" keyword --> 
+// this keyword is mostly use in functions or we can say member functions or methods of a class in assinging the private attribute values to objects
+// if method takes argument which is same as the defined attributes in class but different in value then this keyword is used to tell the program
+// wheather the argument value is to be assign to object or the value defined in the class for that variable
+// if (this -> x = x;) in this scenario the "x" after "=" is pointing to the value of x come in argument of function call
+// if (x = x;) in this scenario the "x" after "=" is pointing to the value of x defined in the class
+// the "x" before "=" is pointing to the value of x of object which calls the function
+// note -> in both the cases the name of variable in class and in argument must be x.
 # include <iostream>
 using namespace std;
 
