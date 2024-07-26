@@ -28,7 +28,7 @@ class node{
         }
         void print(node* head){
             if(head == NULL){
-                cout<<"list is empty, nothing to print :-(";
+                cout<<"list is empty, nothing to print :-("<<endl;
             }
             else{
                 node* temp = head;
