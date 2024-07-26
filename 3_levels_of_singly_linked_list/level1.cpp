@@ -40,3 +40,23 @@ class node{
                 cout<<endl;
             }
         }
+int main ()
+{
+    node* tail = NULL;
+    // print(tail);
+    insertNode(tail, 2);
+    print(tail);
+    insertNode(tail, 3);
+    print(tail);
+     insertNode(tail, 4);
+    print(tail);
+     insertNode(tail, 8);
+    print(tail);
+     insertNode(tail, 22);
+    print(tail);
+     insertNode(tail, 10);
+    print(tail);
+     insertNode(tail, 35);
+    print(tail);
+return 0;
+}
